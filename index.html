@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <script src="./scripts/bundle.js" type="text/javascript"></script>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaFlip</title>
-    <link href="style/output.css" rel="stylesheet">
+    <title>MetaFlip - The Everything Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .product-box {
+            width: calc(33.3333% - 1rem);
+            aspect-ratio: 16/9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <h1>MetaFlip</h1>
-    <img id="logo" src="images/logo.jpg">
-    <img id="deals" src="images/deals.jpg">
-    <img id="everything" src="images/everything.jpg">
-    <img id="chains" src="images/chains.jpg">
-    
+<body class="bg-blue-900 font-sans">
+    <div class="bg-yellow-300 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-5xl font-bold text-gray-800">MetaFlip</h1>
+            <!-- <div class="flex space-x-4">
+                <a href="#cars" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                    <img src="cars.png" alt="Cars" class="w-6 h-6">
+                </a>
+                <a href="#nft" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                    <img src="nft.png" alt="NFT" class="w-6 h-6">
+                </a>
+                <a href="#gadgets" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                    <img src="gadgets.png" alt="Gadgets" class="w-6 h-6">
+                </a>
+                <a href="#nft-art" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                    <img src="nft-art.png" alt="NFT Art" class="w-6 h-6">
+                </a>
+                <a href="#more" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                    <img src="more.png" alt="More" class="w-6 h-6">
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-8">
+        <button id="connectButton" onclick="bundle.connect()" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold text-lg py-2 px-4 rounded transition duration-300 ease-in-out 
+        focus:outline-none font-sans">Connect with MetaMask</button>
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-semibold text-black-800">The Everything Marketplace</h2>
+            <p class="text-black-600 text-3xl">Buy and Sell Physical & Digital Goods</p>
+            <p class="text-black-600 text-3xl">True Owners, Good Deals</p>
+        </div>
+        <div class="flex flex-wrap -mx-4">
+            <!-- Product Boxes -->
+            <div id="cars" class="product-box mx-4 mb-8"></div>
+            <div id="nft" class="product-box mx-4 mb-8"></div>
+            <div id="gadgets" class="product-box mx-4 mb-8"></div>
+            <div id="nft-art" class="product-box mx-4 mb-8"></div>
+            <div id="more" class="product-box mx-4 mb-8"></div>
+        </div>
+    </div>
 </body>
 </html>
